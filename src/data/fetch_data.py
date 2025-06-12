@@ -71,7 +71,7 @@ def get_news_sentiment(query: str,
     resp = client.get_everything(
         q=query,
         from_param=from_date,
-        to_param=to_date,
+        to=to_date,
         language='en',
         sort_by='relevancy',
         page_size=100

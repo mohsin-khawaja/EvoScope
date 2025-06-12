@@ -11,10 +11,21 @@ from .env import TradingEnv
 def train_lstm_policy():
     """Original LSTM policy training function"""
     df = build_dataset()
+    print(f"Dataset loaded with shape: {df.shape}")
+    
+    # Calculate returns and create labels
+    df['returns'] = df['AAPL_Close'].pct_change()
+    df['future_returns'] = df['returns'].shift(-1)
+    
+    # Remove NaN values
+    df = df.dropna()
+    
+    # Create features and labels with same length
     X = df[['AAPL_Close','BTC_Close','sentiment']].values
-    y = (df['AAPL_Close'].pct_change().shift(-1) > 0).astype(int).dropna()
-    X = X[:-1]
-
+    y = (df['future_returns'] > 0).astype(int).values
+    
+    print(f"Features shape: {X.shape}, Labels shape: {y.shape}")
+    
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
@@ -52,11 +63,15 @@ def train_rl_agent():
         print("Model saved as 'ppo_trader'")
         
         # Basic evaluation
-        obs = env.reset()
+        obs, info = env.reset()
         total_reward = 0
         for _ in range(100):
             action, _ = model.predict(obs)
-            obs, reward, done, _ = env.step(action)
+            step_result = env.step(action)
+            if len(step_result) == 5:
+                obs, reward, done, truncated, info = step_result
+            else:
+                obs, reward, done, info = step_result
             total_reward += reward
             if done:
                 break
@@ -81,14 +96,18 @@ def train_rl_agent():
         print("4. Evaluate performance")
         
         # Simple random policy evaluation for demonstration
-        obs = env.reset()
+        obs, info = env.reset()
         total_reward = 0
         steps = 0
         
         while steps < 100:
             # Random action between -1 and 1 (position)
             action = np.random.uniform(-1, 1)
-            obs, reward, done, _ = env.step(action)
+            step_result = env.step(action)
+            if len(step_result) == 5:
+                obs, reward, done, truncated, info = step_result
+            else:
+                obs, reward, done, info = step_result
             total_reward += reward
             steps += 1
             if done:
