@@ -1,0 +1,9 @@
+pandas
+yfinance
+ccxt
+requests
+beautifulsoup4
+newsapi-python
+scikit-learn
+tensorflow
+python-dotenv
