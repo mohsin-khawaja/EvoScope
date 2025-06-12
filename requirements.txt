@@ -7,3 +7,8 @@ newsapi-python
 scikit-learn
 tensorflow
 python-dotenv
+stable-baselines3
+matplotlib
+seaborn
+jupyter
+notebook
