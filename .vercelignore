@@ -1,0 +1,41 @@
+# Python files and directories
+*.py
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Data and model files
+*.csv
+*.json
+data/
+models/
+experiments/
+*.pkl
+*.h5
+*.pt
+*.pth
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints
+
+# Python requirements
+requirements.txt
+Pipfile
+Pipfile.lock
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/ 
