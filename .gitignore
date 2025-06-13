@@ -1,5 +1,76 @@
-# Environment variables (contains API keys)
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js
+.next/
+out/
+build/
+
+# Environment variables
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Python (for existing Python files)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.env
+pip-log.txt
+pip-delete-this-directory.txt
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data files
+*.csv
+*.json
+data/
+models/
+*.pkl
+*.h5
+*.pt
+*.pth
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
 
 # Python
 __pycache__/
@@ -18,14 +89,7 @@ coverage.xml
 *.log
 .git
 .mypy_cache
-.pytest_cache
 .hypothesis
-
-# Virtual environments
-venv/
-.venv/
-env/
-.env/
 
 # IDE
 .vscode/
