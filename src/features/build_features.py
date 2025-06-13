@@ -2,7 +2,77 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
-from ..data.fetch_data import get_stock_data, get_crypto_data, get_news_sentiment
+from data.fetch_data import get_stock_data, get_crypto_data, get_news_sentiment
+
+def build_features_from_data(data):
+    """
+    Build features from provided stock data
+    """
+    try:
+        features = data.copy()
+        
+        # Technical indicators
+        # Moving averages
+        features['MA_5'] = features['Close'].rolling(window=5).mean()
+        features['MA_20'] = features['Close'].rolling(window=20).mean()
+        features['MA_50'] = features['Close'].rolling(window=50).mean()
+        
+        # RSI
+        delta = features['Close'].diff()
+        gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
+        loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
+        rs = gain / loss
+        features['RSI'] = 100 - (100 / (1 + rs))
+        
+        # MACD
+        exp1 = features['Close'].ewm(span=12).mean()
+        exp2 = features['Close'].ewm(span=26).mean()
+        features['MACD'] = exp1 - exp2
+        features['MACD_signal'] = features['MACD'].ewm(span=9).mean()
+        
+        # Bollinger Bands
+        bb_window = 20
+        bb_std = features['Close'].rolling(window=bb_window).std()
+        bb_mean = features['Close'].rolling(window=bb_window).mean()
+        features['BB_Upper'] = bb_mean + (bb_std * 2)
+        features['BB_Lower'] = bb_mean - (bb_std * 2)
+        features['BB_Width'] = (features['BB_Upper'] - features['BB_Lower']) / bb_mean
+        
+        # Price-based features
+        features['Price_Change'] = features['Close'].pct_change()
+        features['High_Low_Ratio'] = features['High'] / features['Low']
+        features['Open_Close_Ratio'] = features['Open'] / features['Close']
+        
+        # Volume features
+        if 'Volume' in features.columns:
+            features['Volume_MA'] = features['Volume'].rolling(window=20).mean()
+            features['Volume_Ratio'] = features['Volume'] / features['Volume_MA']
+        else:
+            features['Volume_Ratio'] = 1.0
+        
+        # Volatility
+        features['Volatility'] = features['Close'].rolling(window=20).std()
+        
+        # Select final feature columns
+        feature_columns = [
+            'Close', 'Open', 'High', 'Low',
+            'MA_5', 'MA_20', 'RSI', 'MACD', 'MACD_signal',
+            'BB_Upper', 'BB_Lower', 'BB_Width',
+            'Price_Change', 'High_Low_Ratio', 'Open_Close_Ratio',
+            'Volume_Ratio', 'Volatility'
+        ]
+        
+        # Only include columns that exist
+        available_columns = [col for col in feature_columns if col in features.columns]
+        
+        return features[available_columns].dropna()
+        
+    except Exception as e:
+        print(f"Error in build_features_from_data: {e}")
+        # Return basic features
+        basic_features = data[['Close', 'Open', 'High', 'Low']].copy()
+        basic_features['Price_Change'] = basic_features['Close'].pct_change()
+        return basic_features.dropna()
 
 def build_dataset():
     try:
