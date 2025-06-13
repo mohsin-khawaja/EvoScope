@@ -37,6 +37,12 @@ def get_stock_data(ticker: str,
     """
     df = yf.download(ticker, start=start, end=end, interval=interval)
     df.index = df.index.tz_localize(None)
+    
+    # Handle multi-level columns for single ticker
+    if df.columns.nlevels > 1:
+        # For single ticker, flatten the multi-level columns
+        df.columns = df.columns.get_level_values(0)
+    
     return df
 
 
