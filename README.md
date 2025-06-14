@@ -4,7 +4,7 @@ A modern, interactive web application showcasing an advanced AI-powered trading 
 
 ## Live Demo
 
-**[View Live Application](https://rl-lstm-ai-trading-agent-3kuk24u4s-mohsin-khawajas-projects.vercel.app)**
+**[View Live Application](https://rl-lstm-ai-trading-agent-k95oc36vm-mohsin-khawajas-projects.vercel.app)**
 
 Experience the full interactive showcase of our RL-LSTM AI Trading Agent with real-time simulations, comprehensive experiment results, and detailed system architecture visualization.
 
