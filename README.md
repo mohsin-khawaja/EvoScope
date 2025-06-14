@@ -1,46 +1,46 @@
-# 🚀 RL-LSTM AI Trading Agent - Web Showcase
+# RL-LSTM AI Trading Agent - Web Showcase
 
 A modern, interactive web application showcasing an advanced AI-powered trading system that combines **Long Short-Term Memory (LSTM)** neural networks with **Reinforcement Learning (RL)** for intelligent market analysis and automated trading decisions.
 
-## 🌐 Live Demo
+## Live Demo
 
-**🚀 [View Live Application](https://rl-lstm-ai-trading-agent-i5yp72tne-mohsin-khawajas-projects.vercel.app)**
+**[View Live Application](https://rl-lstm-ai-trading-agent-fbrsqwdt6-mohsin-khawajas-projects.vercel.app)**
 
 Experience the full interactive showcase of our RL-LSTM AI Trading Agent with real-time simulations, comprehensive experiment results, and detailed system architecture visualization.
 
-## ✨ Features
+## Features
 
-### 🎯 Interactive Dashboard
+### Interactive Dashboard
 - **Real-time System Overview** - Live trading metrics and system status
 - **Portfolio Analytics** - P&L tracking, performance visualization
 - **System Alerts** - Real-time notifications and status updates
 
-### 🎮 Live Trading Demo
+### Live Trading Demo
 - **Real-time Trading Simulation** - Interactive demo with live price feeds
 - **AI Decision Visualization** - See LSTM predictions and RL decisions in real-time
 - **Portfolio Management** - Track trades, P&L, and performance metrics
 - **Multiple Assets** - Support for stocks (AAPL, TSLA, NVDA) and crypto (BTC)
 
-### 🧪 Experiment Results
+### Experiment Results
 - **26+ Comprehensive Experiments** - Detailed analysis of model configurations
 - **LSTM Architecture Optimization** - Hidden units, layers, dropout analysis
 - **Sequence Length Studies** - Optimal time window research
 - **RL Parameter Tuning** - Learning rate, epsilon, batch size optimization
 - **Performance Benchmarking** - Comparison with traditional strategies
 
-### 📊 Model Performance
+### Model Performance
 - **LSTM Training Metrics** - Loss curves, accuracy progression, feature importance
 - **RL Training Analytics** - Reward progression, exploration vs exploitation
 - **Confusion Matrix** - Detailed classification performance
 - **Real-time Metrics** - Live model performance indicators
 
-### 🏗️ System Architecture
+### System Architecture
 - **Interactive Architecture Diagram** - Visual system overview with data flow
 - **Technology Stack** - Comprehensive tech stack visualization
 - **Model Specifications** - Detailed LSTM and RL configuration
 - **Performance Metrics** - System-wide performance indicators
 
-## 🚀 Quick Deploy to Vercel
+## Quick Deploy to Vercel
 
 ### One-Click Deploy
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mohsin-khawaja/rl-lstm-ai-trading-agent)
@@ -68,7 +68,7 @@ Experience the full interactive showcase of our RL-LSTM AI Trading Agent with re
    npx vercel --prod
    ```
 
-## 🛠️ Local Development
+## Local Development
 
 ### Prerequisites
 - Node.js 18.0 or later
@@ -94,7 +94,7 @@ Experience the full interactive showcase of our RL-LSTM AI Trading Agent with re
 4. **Open in browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 rl-lstm-ai-trading-agent/
@@ -121,7 +121,7 @@ rl-lstm-ai-trading-agent/
 └── requirements.txt              # Python dependencies
 ```
 
-## 🎨 Technology Stack
+## Technology Stack
 
 ### Frontend
 - **Next.js 14** - React framework with app directory
@@ -139,7 +139,7 @@ rl-lstm-ai-trading-agent/
 - **Vercel** - Zero-configuration deployment
 - **Static Export** - Optimized for static hosting
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 No environment variables required for the showcase - all data is simulated for demonstration purposes.
@@ -149,7 +149,7 @@ No environment variables required for the showcase - all data is simulated for d
 - **Data**: Modify component files to integrate with real APIs
 - **Features**: Add new sections by creating components and updating navigation
 
-## 📊 Showcase Highlights
+## Showcase Highlights
 
 ### AI Model Performance
 - **94.2% LSTM Accuracy** - State-of-the-art price prediction
@@ -169,7 +169,7 @@ No environment variables required for the showcase - all data is simulated for d
 - **Risk Management** - Advanced position sizing and stop-loss
 - **Scalable Architecture** - Cloud-native, containerized design
 
-## 🚀 Deployment Options
+## Deployment Options
 
 ### Vercel (Recommended)
 - Zero-configuration deployment
@@ -200,11 +200,11 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-## 📝 License
+## License
 
 This project is for demonstration and educational purposes. Please refer to the original research project for licensing terms.
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -212,13 +212,6 @@ This project is for demonstration and educational purposes. Please refer to the 
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📧 Contact
+## Contact
 
-For questions about the AI trading system or this showcase:
-- **Project**: RL-LSTM AI Trading Agent
-- **Demo**: [Live Demo](https://your-vercel-deployment.vercel.app)
-- **Repository**: [GitHub](https://github.com/yourusername/rl-lstm-trading-showcase)
-
----
-
-**⚠️ Disclaimer**: This showcase is for educational and demonstration purposes only. The trading system shown is a research project and not intended for live trading with real money. Always consult with financial professionals before making investment decisions.
+For questions about this project or the underlying research, please open an issue on GitHub.
