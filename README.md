@@ -2,6 +2,12 @@
 
 A modern, interactive web application showcasing an advanced AI-powered trading system that combines **Long Short-Term Memory (LSTM)** neural networks with **Reinforcement Learning (RL)** for intelligent market analysis and automated trading decisions.
 
+## 🌐 Live Demo
+
+**🚀 [View Live Application](https://rl-lstm-ai-trading-agent-i5yp72tne-mohsin-khawajas-projects.vercel.app)**
+
+Experience the full interactive showcase of our RL-LSTM AI Trading Agent with real-time simulations, comprehensive experiment results, and detailed system architecture visualization.
+
 ## ✨ Features
 
 ### 🎯 Interactive Dashboard
@@ -37,14 +43,14 @@ A modern, interactive web application showcasing an advanced AI-powered trading 
 ## 🚀 Quick Deploy to Vercel
 
 ### One-Click Deploy
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/rl-lstm-trading-showcase)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mohsin-khawaja/rl-lstm-ai-trading-agent)
 
 ### Manual Deploy
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/rl-lstm-trading-showcase.git
-   cd rl-lstm-trading-showcase
+   git clone https://github.com/mohsin-khawaja/rl-lstm-ai-trading-agent.git
+   cd rl-lstm-ai-trading-agent/web-app
    ```
 
 2. **Install dependencies**
@@ -70,39 +76,49 @@ A modern, interactive web application showcasing an advanced AI-powered trading 
 
 ### Setup
 
-1. **Install dependencies**
+1. **Navigate to web-app directory**
+   ```bash
+   cd web-app
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. **Run development server**
+3. **Run development server**
    ```bash
    npm run dev
    ```
 
-3. **Open in browser**
+4. **Open in browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📁 Project Structure
 
 ```
-rl-lstm-trading-showcase/
-├── app/                          # Next.js 14 app directory
-│   ├── layout.tsx               # Root layout component
-│   ├── page.tsx                 # Main page component
-│   └── globals.css              # Global styles with Tailwind
-├── components/                   # React components
-│   ├── Navigation.tsx           # Sidebar navigation
-│   ├── DashboardOverview.tsx    # Main dashboard
-│   ├── LiveTradingDemo.tsx      # Interactive trading demo
-│   ├── ExperimentResults.tsx    # Experiment showcase
-│   ├── ModelPerformance.tsx     # Model analytics
-│   └── SystemArchitecture.tsx   # Architecture visualization
-├── public/                       # Static assets
-├── package.json                  # Dependencies and scripts
-├── next.config.js               # Next.js configuration
-├── tailwind.config.js           # Tailwind CSS configuration
-└── tsconfig.json                # TypeScript configuration
+rl-lstm-ai-trading-agent/
+├── web-app/                      # Next.js web showcase application
+│   ├── app/                      # Next.js 14 app directory
+│   │   ├── layout.tsx           # Root layout component
+│   │   ├── page.tsx             # Main page component
+│   │   └── globals.css          # Global styles with Tailwind
+│   ├── components/               # React components
+│   │   ├── Navigation.tsx       # Sidebar navigation
+│   │   ├── DashboardOverview.tsx # Main dashboard
+│   │   ├── LiveTradingDemo.tsx  # Interactive trading demo
+│   │   ├── ExperimentResults.tsx # Experiment showcase
+│   │   ├── ModelPerformance.tsx # Model analytics
+│   │   └── SystemArchitecture.tsx # Architecture visualization
+│   ├── package.json             # Dependencies and scripts
+│   ├── next.config.js           # Next.js configuration
+│   ├── tailwind.config.js       # Tailwind CSS configuration
+│   └── tsconfig.json            # TypeScript configuration
+├── src/                          # Python research code
+├── data/                         # Dataset and processed data
+├── experiments/                  # Experiment results and analysis
+├── notebooks/                    # Jupyter notebooks
+└── requirements.txt              # Python dependencies
 ```
 
 ## 🎨 Technology Stack
