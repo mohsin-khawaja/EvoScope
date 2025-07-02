@@ -15,8 +15,13 @@ import sys
 import os
 sys.path.append('src')
 
-# Set your OpenAI API key
-os.environ['OPENAI_API_KEY'] = 'your-openai-api-key-here'
+# Set your OpenAI API key (replace with your actual key or set as environment variable)
+# os.environ['OPENAI_API_KEY'] = 'your-openai-api-key-here'  
+# Or set it in your environment: export OPENAI_API_KEY='your-key-here'
+if 'OPENAI_API_KEY' not in os.environ:
+    print("⚠️ Please set your OpenAI API key:")
+    print("   export OPENAI_API_KEY='your-key-here'")
+    print("   Or uncomment and add your key in the script")
 
 import torch
 import numpy as np
