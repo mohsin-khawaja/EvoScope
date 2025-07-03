@@ -7,7 +7,8 @@ import {
   FlaskConical,
   Target,
   Network,
-  Settings
+  Settings,
+  Bitcoin
 } from 'lucide-react'
 
 interface NavigationProps {
@@ -28,6 +29,12 @@ export default function Navigation({ activeTab, setActiveTab }: NavigationProps)
       label: 'Live Demo',
       icon: Play,
       description: 'Trading Simulation'
+    },
+    {
+      id: 'crypto',
+      label: 'Crypto Trading',
+      icon: Bitcoin,
+      description: 'Real Crypto Data'
     },
     {
       id: 'experiments',

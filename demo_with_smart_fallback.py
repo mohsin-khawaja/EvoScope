@@ -23,6 +23,12 @@ if 'OPENAI_API_KEY' not in os.environ:
     print("   export OPENAI_API_KEY='your-key-here'")
     print("   Or uncomment and add your key in the script")
 
+# Alpha Vantage API key (already configured)
+ALPHA_VANTAGE_API_KEY = "38RX2Y3EUK2CV7Y8"
+
+# NewsAPI key (already configured)
+NEWSAPI_KEY = "1d5bb349-6f72-4f83-860b-9c2fb3c220bd"
+
 import torch
 import numpy as np
 import pandas as pd

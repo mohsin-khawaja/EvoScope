@@ -21,6 +21,7 @@ import {
 import Navigation from '@/components/Navigation'
 import DashboardOverview from '@/components/DashboardOverview'
 import LiveTradingDemo from '@/components/LiveTradingDemo'
+import CryptoTradingDemo from '@/components/CryptoTradingDemo'
 import ExperimentResults from '@/components/ExperimentResults'
 import ModelPerformance from '@/components/ModelPerformance'
 import SystemArchitecture from '@/components/SystemArchitecture'
@@ -71,6 +72,8 @@ export default function Home() {
         return <DashboardOverview />
       case 'demo':
         return <LiveTradingDemo />
+      case 'crypto':
+        return <CryptoTradingDemo />
       case 'experiments':
         return <ExperimentResults />
       case 'performance':
