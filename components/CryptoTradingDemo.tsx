@@ -159,10 +159,12 @@ export default function CryptoTradingDemo() {
           symbol,
           technicalSignal: Math.random() - 0.5,
           sentimentSignal: Math.random() - 0.5,
+          economicSignal: Math.random() - 0.5,
           combinedSignal: Math.random() - 0.5,
           action,
           confidence,
-          reasoning: `Crypto analysis for ${symbol}: ${action} signal with ${confidence.toFixed(1)}% confidence`
+          reasoning: `Crypto analysis for ${symbol}: ${action} signal with ${confidence.toFixed(1)}% confidence`,
+          riskScore: Math.random() * 10
         }
       }
       
@@ -297,7 +299,7 @@ export default function CryptoTradingDemo() {
           >
             {cryptos.map(crypto => (
               <option key={crypto.id} value={crypto.id}>
-                {crypto.symbol} ({currentQuote?.name || crypto.symbol})
+                {crypto.symbol}
               </option>
             ))}
           </select>
@@ -503,7 +505,7 @@ export default function CryptoTradingDemo() {
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-trading-muted">Market Cap</span>
                   <span className="text-trading-accent">
-                    ${currentQuote ? (currentQuote.marketCap / 1000000000).toFixed(1) + 'B' : 'N/A'}
+                    ${currentQuote ? (currentQuote.volume24h / 1000000).toFixed(1) + 'M' : 'N/A'}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-sm">

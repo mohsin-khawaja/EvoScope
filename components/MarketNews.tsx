@@ -47,6 +47,7 @@ export default function MarketNews({ symbol, isActive }: MarketNewsProps) {
             description: 'Technical analysis suggests positive momentum',
             source: 'Market Analysis',
             publishedAt: new Date().toISOString(),
+            url: '#',
             sentiment: 'positive',
             sentimentScore: 0.3
           },
@@ -55,6 +56,7 @@ export default function MarketNews({ symbol, isActive }: MarketNewsProps) {
             description: 'Increased volatility observed in recent sessions',
             source: 'Trading Desk',
             publishedAt: new Date().toISOString(),
+            url: '#',
             sentiment: 'neutral',
             sentimentScore: 0.0
           }

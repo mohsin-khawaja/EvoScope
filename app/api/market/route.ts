@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// API Keys (in production, use environment variables)
-const ALPHA_VANTAGE_KEY = "38RX2Y3EUK2CV7Y8"
-const NEWSAPI_KEY = "1d5bb349-6f72-4f83-860b-9c2fb3c220bd"
-const FRED_API_KEY = "56JBx7QuGHquzDi6yzMd"
-const ALPACA_API_KEY = "PKH6HJ2RBVZ20P8EJPNT"
-const ALPACA_SECRET = "your_secret_key" // You need to provide this
+// API Keys from environment variables with fallbacks
+const ALPHA_VANTAGE_KEY = process.env.ALPHA_VANTAGE_API_KEY || "38RX2Y3EUK2CV7Y8"
+const NEWSAPI_KEY = process.env.NEWSAPI_KEY || "1d5bb349-6f72-4f83-860b-9c2fb3c220bd"
+const FRED_API_KEY = process.env.FRED_API_KEY || "56JBx7QuGHquzDi6yzMd"
+const ALPACA_API_KEY = process.env.ALPACA_API_KEY || "PKH6HJ2RBVZ20P8EJPNT"
+const ALPACA_SECRET = process.env.ALPACA_SECRET_KEY || "your_secret_key"
 
 // Base URLs
 const ALPHA_VANTAGE_BASE = "https://www.alphavantage.co/query"
