@@ -16,7 +16,6 @@ htmlcov/
 
 # Data and model files
 *.csv
-*.json
 data/
 models/
 experiments/
@@ -38,4 +37,7 @@ Pipfile.lock
 venv/
 .venv/
 env/
-.env/ 
+.env/
+
+# Exclude old web-app directory to avoid conflicts
+web-app/ 
