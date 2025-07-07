@@ -6,12 +6,12 @@ import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'RL-LSTM AI Trading Agent | Interactive Showcase',
+  title: 'EvoScope RL-LSTM AI Trading Agent | Interactive Showcase',
   description: 'Advanced AI-powered trading system combining LSTM neural networks with Reinforcement Learning for intelligent market analysis and automated trading decisions.',
   keywords: ['AI Trading', 'LSTM', 'Reinforcement Learning', 'Machine Learning', 'Quantitative Trading', 'Financial AI'],
   authors: [{ name: 'AI Trading Team' }],
   openGraph: {
-    title: 'RL-LSTM AI Trading Agent',
+    title: 'EvoScope RL-LSTM AI Trading Agent',
     description: 'Advanced AI-powered trading system showcase',
     type: 'website',
   },

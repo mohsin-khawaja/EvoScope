@@ -101,7 +101,7 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gradient">
-                  RL-LSTM AI Trading Agent
+                  EvoScope RL-LSTM AI Trading Agent
                 </h1>
                 <p className="text-sm text-trading-muted">
                   Advanced AI-Powered Trading System
