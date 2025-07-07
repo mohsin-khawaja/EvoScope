@@ -254,6 +254,7 @@ export default function ModelPerformance() {
               <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
               <XAxis dataKey="episode" stroke="#64748b" />
               <YAxis stroke="#64748b" />
+              <YAxis yAxisId="right" orientation="right" stroke="#64748b" />
               <Tooltip 
                 contentStyle={{ 
                   backgroundColor: '#1e293b', 
