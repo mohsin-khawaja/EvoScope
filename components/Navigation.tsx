@@ -8,7 +8,9 @@ import {
   Target,
   Network,
   Settings,
-  Bitcoin
+  Bitcoin,
+  Database,
+  TrendingUp
 } from 'lucide-react'
 
 interface NavigationProps {
@@ -29,6 +31,12 @@ export default function Navigation({ activeTab, setActiveTab }: NavigationProps)
       label: 'Live Demo',
       icon: Play,
       description: 'Trading Simulation'
+    },
+    {
+      id: 'alpaca-tracker',
+      label: 'Alpaca Tracker',
+      icon: TrendingUp,
+      description: 'Paper Trading Monitor'
     },
     {
       id: 'crypto',

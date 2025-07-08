@@ -21,6 +21,7 @@ import {
 import Navigation from '@/components/Navigation'
 import DashboardOverview from '@/components/DashboardOverview'
 import LiveTradingDemo from '@/components/LiveTradingDemo'
+import AlpacaTracker from '@/components/AlpacaTracker'
 import CryptoTradingDemo from '@/components/CryptoTradingDemo'
 import ExperimentResults from '@/components/ExperimentResults'
 import ModelPerformance from '@/components/ModelPerformance'
@@ -72,6 +73,8 @@ export default function Home() {
         return <DashboardOverview />
       case 'demo':
         return <LiveTradingDemo />
+      case 'alpaca-tracker':
+        return <AlpacaTracker />
       case 'crypto':
         return <CryptoTradingDemo />
       case 'experiments':

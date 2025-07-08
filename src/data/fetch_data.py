@@ -44,6 +44,17 @@ ALPHA_VANTAGE_BASE_URL = "https://www.alphavantage.co/query"
 # FRED base URL
 FRED_BASE_URL = "https://api.stlouisfed.org/fred"
 
+# Paper Trading (Start Here)
+ALPACA_API_KEY=your_alpaca_paper_key
+ALPACA_SECRET_KEY=your_alpaca_paper_secret
+ALPACA_BASE_URL=https://paper-api.alpaca.markets
+
+# OpenAI for LLM Analysis
+OPENAI_API_KEY=your_openai_key
+
+# Market Data APIs
+ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
+NEWSAPI_KEY=your_newsapi_key
 
 def get_stock_data(ticker: str,
                    start: str,
@@ -685,3 +696,13 @@ def get_fred_series_info(series_id: str) -> dict:
     except Exception as e:
         print(f"Error fetching FRED series info for {series_id}: {e}")
         return {}
+
+# Daily monitoring checklist
+def daily_review():
+    performance = get_performance_summary()
+    
+    if performance['total_return'] < -10:  # Stop at 10% portfolio loss
+        stop_all_trading()
+    
+    if performance['volatility'] > 0.3:   # High volatility warning
+        reduce_position_sizes()
